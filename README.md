@@ -26,7 +26,7 @@ I build full-stack software and APIs, and I like working on the parts that make 
 [![Java, Spring, PostgreSQL, TypeScript, React, Astro, Docker, Git, GitHub, Linux, Bash, Maven](https://skillicons.dev/icons?i=java,spring,postgres,ts,react,astro,docker,git,github,linux,bash,maven&perline=12)](https://skillicons.dev)
 
 <details open>
-<summary><strong>Music</strong></summary>
+<summary><strong>On Repeat</strong></summary>
 
 <br>
 
