@@ -9,7 +9,7 @@
 <!--END_SECTION:terminal-->
 
 
-Software Developer • API Developer • Full-Stack • Software Architecture
+Software Engineer • API Developer • Full-Stack • Software Architecture
 
 I build full-stack software and APIs, and I like working on the parts that make systems reliable as they grow: architecture, data boundaries, contracts, and tests.
 
@@ -33,8 +33,8 @@ I build full-stack software and APIs, and I like working on the parts that make 
 <table>
   <tr>
     <td align="center" valign="top">
-      <strong>Top Albums · Last 12 Months</strong><br><br>
-      <a href="https://www.last.fm/user/driptoohard/library/albums"><img src="./lastfm-year.png" width="330" alt="Top 9 albums from the last 12 months on Last.fm"></a>
+      <strong>Top Albums · This Week</strong><br><br>
+      <a href="https://www.last.fm/user/driptoohard/library/albums?date_preset=LAST_7_DAYS"><img src="./lastfm-year.png" width="330" alt="Top 9 albums from this week on Last.fm"></a>
     </td>
     <td align="center" valign="top">
       <strong>Recently Played</strong><br><br>

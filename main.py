@@ -37,9 +37,9 @@ R = "\x1b[0m"
 
 PROMPT = f"\x1b[0;91m{USERNAME}\x1b[0m@\x1b[0;93mjvm-os ~> \x1b[0m"
 
-TYPING = 1
-BEAT = 2
-HOLD_FINAL = 55
+TYPING = 2
+BEAT = 8
+HOLD_FINAL = 450  # 30 seconds at the workflow's 15 FPS
 
 ROW_H = 18
 YPAD = 15

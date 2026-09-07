@@ -34,7 +34,7 @@ jobs:
           GIFOS_GENERAL_LOOP_COUNT: 0 # 0 = loop infinito
           GIFOS_GENERAL_COLOR_SCHEME: 'yoru'
 
-      - name: Generate yearly Last.fm collage
+      - name: Generate weekly Last.fm collage
         run: python lastfm_collage.py
         env:
           LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}

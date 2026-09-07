@@ -1,4 +1,4 @@
-"""Generate a 3x3 collage with the user's yearly top Last.fm albums."""
+"""Generate a 3x3 collage with the user's weekly top Last.fm albums."""
 
 import io
 import json
@@ -32,7 +32,7 @@ def top_albums(api_key: str) -> list[dict]:
         {
             "method": "user.gettopalbums",
             "user": USERNAME,
-            "period": "12month",
+            "period": "7day",
             "limit": GRID_SIZE * GRID_SIZE,
             "api_key": api_key,
             "format": "json",
@@ -91,7 +91,7 @@ def generate() -> None:
         raise SystemExit(f"Could not fetch Last.fm albums: {type(error).__name__}") from None
 
     if not albums:
-        raise SystemExit(f"No yearly albums found for {USERNAME}")
+        raise SystemExit(f"No weekly albums found for {USERNAME}")
 
     size = GRID_SIZE * TILE_SIZE
     collage = Image.new("RGB", (size, size), "#121212")
@@ -102,7 +102,7 @@ def generate() -> None:
         collage.paste(tile, (x, y))
 
     collage.save(OUTPUT, "PNG", optimize=True)
-    print(f"INFO: generated {OUTPUT.name} with {len(albums)} yearly albums")
+    print(f"INFO: generated {OUTPUT.name} with {len(albums)} weekly albums")
 
 
 if __name__ == "__main__":
