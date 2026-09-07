@@ -1,0 +1,52 @@
+name: Update README terminal
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * *' # 03:00 America/Sao_Paulo
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Pinado em 3.12 de proposito: o gifos depende de Pillow 10.4.0, que nao
+      # tem wheel para Python 3.13+ e falha ao compilar.
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update && sudo apt-get install -y ffmpeg
+          python -m pip install --upgrade pip
+          pip install git+https://github.com/x0rzavi/github-readme-terminal.git@main
+
+      # Sem GITHUB_TOKEN: o conteudo do GIF e estatico, nao consulta a API.
+      - name: Generate GIF
+        run: python main.py
+        env:
+          GIFOS_GENERAL_FPS: 15
+          GIFOS_GENERAL_LOOP_COUNT: 0 # 0 = loop infinito
+          GIFOS_GENERAL_COLOR_SCHEME: 'yoru'
+
+      - name: Generate yearly Last.fm collage
+        run: python lastfm_collage.py
+        env:
+          LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
+
+      - name: Commit
+        run: |
+          git add README.md output.gif lastfm-year.png
+          if git diff --staged --quiet; then
+            echo "Nada mudou, nada a commitar."
+            exit 0
+          fi
+          git -c "user.name=github-actions[bot]" \
+              -c "user.email=41898282+github-actions[bot]@users.noreply.github.com" \
+              commit -m "chore: update terminal GIF ($(TZ='America/Sao_Paulo' date '+%Y-%m-%d %H:%M'))"
+          git push
