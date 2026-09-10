@@ -38,7 +38,7 @@ I build full-stack software and APIs, and I like working on the parts that make 
     </td>
     <td align="center" valign="top">
       <strong>Recently Played</strong><br><br>
-      <img src="https://spotify-recently-played.jeffreyca.workers.dev/svg?user=hqkn0ttbwi4xjo4ekauyo8ahv&amp;count=5&amp;profile=off" width="400" alt="Spotify recently played">
+      <img src="https://spotify-recently-played.jeffreyca.workers.dev/svg?user=hqkn0ttbwi4xjo4ekauyo8ahv&amp;count=5&amp;profile=on" width="400" alt="Spotify recently played">
     </td>
   </tr>
 </table>
