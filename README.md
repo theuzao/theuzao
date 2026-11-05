@@ -17,7 +17,7 @@ I build full-stack software and APIs, and I like working on the parts that make 
 * Software Engineering student at [PUC Minas](https://www.pucminas.br/).
 * I work mainly with **Java + Spring Boot** on the backend and **TypeScript, React, and Astro** on the frontend.
 * Interested in **API design, domain modeling, data isolation, automated testing, and software architecture**.
-* Personal website: [theuzao.dev](https://theuzao.dev/)
+* Personal website: [santiestudio.com.br](https://santiestudio.com.br/)
 * LinkedIn: [in/theuzao](https://www.linkedin.com/in/theuzao/)
 
 ### Tech Stack
